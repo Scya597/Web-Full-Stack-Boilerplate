@@ -6,7 +6,7 @@ import Create from './components/Create';
 import ReadAll from './components/ReadAll';
 import ReadAndDeleteOne from './components/ReadAndDeleteOne';
 import Update from './components/Update';
-
+import './scss/style.scss';
 
 ReactDOM.render(
   <BrowserRouter>
