@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node server/server.js --presets es2015,es2016,stage-2",
-    "preprod": "rimraf public",
+    "start": "NODE_ENV=prod babel-node server/server.js --presets es2015,es2016,stage-2",
     "prod": "webpack --env.prod -p",
     "dev": "npm-run-all --parallel dev:*",
-    "predev:build": "rimraf public",
     "dev:build": "webpack -wd --env.dev",
-    "dev:server": "nodemon --exec babel-node server/server.js --ignore public/"
+    "dev:server": "NODE_ENV=dev nodemon --exec babel-node server/server.js --ignore public/"
   },
   "author": "Chan Yu An",
   "license": "ISC",
@@ -47,11 +45,12 @@
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
     "npm-run-all": "2.3.0",
-    "rimraf": "2.5.4",
+    "reload": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.20",
     "webpack-config-utils": "2.0.0",
+    "webpack-dev-middleware": "^1.11.0",
     "webpack-validator": "2.2.7"
   }
 }
