@@ -1,12 +1,18 @@
 const webpackValidator = require('webpack-validator');
 const { getIfUtils } = require('webpack-config-utils');
 const path = require('path');
+const webpack = require('webpack');
+
+const hotMiddlewareScript = 'webpack-hot-middleware/client';
 
 module.exports = (env) => {
   const { ifProd, ifNotProd } = getIfUtils(env);
   const config = webpackValidator({
     entry: {
-      bundle: './src/index.js',
+      bundle: [
+        hotMiddlewareScript,
+        './src/index.js',
+      ],
     },
     output: {
       filename: 'bundle.js',
@@ -32,6 +38,10 @@ module.exports = (env) => {
         },
       ],
     },
+    plugins: [
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin(),
+    ],
   });
   return config;
 };

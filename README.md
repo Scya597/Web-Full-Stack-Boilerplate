@@ -2,25 +2,26 @@
 
 
 ## 0. Table of Contents  
-- [Development](#1-development)
-- [Production](#2-production)
+- [Setup Boilerplate](#1-setup)
+- [Setup Mongodb](#2-mongodb)
+- [Development](#3-development)
+- [Production](#4-production)
 
-## 1. Development
-
-### 1.1 To build the production package and run the server
-
+## 1. Setup Boilerplate
 ```
 git clone https://github.com/Scya597/MERN-Boilerplate.git
 npm install
 ```
 
-### 1.2 To install mongodb
+## 2. Setup Mongodb
+
+### 2.1 To install mongodb
 
 ```
 brew install mongo
 ```
 
-### 1.3 Initial config of mongodb
+### 2.2 Initial config of mongodb
 
 Create database directory
 
@@ -41,7 +42,7 @@ Taking ownership to /data/db
 sudo chown -Rv John /data/db
 ```
 
-### 1.4 To run the database
+### 2.3 To run the database
 
 ```
 mongod
@@ -53,13 +54,26 @@ If you don't want to run mongod everytime you need, the following command will a
 brew services start mongo
 ```
 
-### 1.5 To develop the project
+## 3. Development
+
+
+### 3.1 Setup script in index.html
+
+![screenshot](https://github.com/Scya597/MERN-Boilerplate/tree/master/public/assets/images/dev.png)
+
+### 3.2 To develop the project
 
 ```
 npm run dev
 ```
 
-## 2. Production
+## 4. Production
+
+### 4.1 Setup script in index.html
+
+![screenshot](https://github.com/Scya597/MERN-Boilerplate/tree/master/public/assets/images/prod.png)
+
+### 4.2 Build production bundle and run the server
 
 ```
 npm run prod
