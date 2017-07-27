@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=prod babel-node server/server.js --presets es2015,es2016,stage-2",
     "preprod": "rimraf public/bundle",
-    "prod": "webpack --env.prod -p",
+    "prod": "webpack --config webpack.prod.config.js -p",
     "dev": "NODE_ENV=dev nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
   },
   "author": "Chan Yu An",

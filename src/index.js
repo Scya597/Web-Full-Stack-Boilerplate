@@ -6,7 +6,6 @@ import './scss/style.scss';
 const rootElement = document.getElementById('root');
 
 let app;
-
 if (module.hot) {
   const { AppContainer } = require('react-hot-loader'); // eslint-disable-line global-require
   app = (
@@ -27,5 +26,7 @@ if (module.hot) {
 } else {
   app = <App />;
 }
+
+// const app = <App />;
 
 render(app, rootElement);
