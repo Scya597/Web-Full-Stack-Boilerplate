@@ -59,7 +59,7 @@ brew services start mongo
 
 ### 3.1 Setup script in index.html
 
-![screenshot](https://github.com/Scya597/MERN-Boilerplate/tree/master/public/assets/images/dev.png)
+![screenshot](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/dev.png)
 
 ### 3.2 To develop the project
 
@@ -71,7 +71,7 @@ npm run dev
 
 ### 4.1 Setup script in index.html
 
-![screenshot](https://github.com/Scya597/MERN-Boilerplate/tree/master/public/assets/images/prod.png)
+![screenshot](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/prod.png)
 
 ### 4.2 Build production bundle and run the server
 
