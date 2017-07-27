@@ -10,8 +10,8 @@ module.exports = (env) => {
     },
     output: {
       filename: 'bundle.js',
-      path: path.join(__dirname, 'public'),
-      publicPath: '/public/',
+      path: path.join(__dirname, 'public/bundle'),
+      publicPath: '/public/bundle/',
       pathinfo: ifNotProd(),
     },
     devtool: ifProd('source-map', 'eval'),

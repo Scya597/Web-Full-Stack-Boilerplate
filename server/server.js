@@ -19,12 +19,6 @@ if (process.env.NODE_ENV === 'dev') {
     publicPath: webpackDevConfig.output.publicPath,
     stats: { colors: true },
   });
-  // const webpackConfig = require('../webpack.dev.config.js');
-  // const compiler = webpack(webpackConfig);
-  // const middleware = webpackMiddleware(compiler, {
-  //   publicPath: webpackConfig.output.publicPath,
-  //   stats: { colors: true },
-  // });
   server.use(middleware);
   server.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
