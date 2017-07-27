@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import axios from 'axios';
 
-class Create extends Component {
+class App extends Component {
   state = {};
 
   render() {
@@ -14,4 +12,4 @@ class Create extends Component {
   }
 }
 
-export default Create;
+export default App;

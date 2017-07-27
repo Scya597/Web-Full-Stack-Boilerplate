@@ -1,23 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import Create from './components/Create';
-import ReadAll from './components/ReadAll';
-import ReadAndDeleteOne from './components/ReadAndDeleteOne';
-import Update from './components/Update';
+import { render } from 'react-dom';
+import App from './components/App';
 import './scss/style.scss';
 
-ReactDOM.render(
-  <BrowserRouter>
-    <div>
-      <Switch>
-        <Route path="/new" component={Create} />
-        <Route path="/edit/:id" component={Update} />
-        <Route path="/:id" component={ReadAndDeleteOne} />
-        <Route path="/" component={ReadAll} />
-      </Switch>
-    </div>
-  </BrowserRouter>,
-  document.getElementById('root'),
-);
+const rootElement = document.getElementById('root');
+
+let app;
+
+if (module.hot) {
+  const { AppContainer } = require('react-hot-loader'); // eslint-disable-line global-require
+  app = (
+    <AppContainer>
+      <App />
+    </AppContainer>
+  );
+
+  module.hot.accept('./components/App', () => {
+    const NewApp = require('./components/App').default; // eslint-disable-line global-require
+    render(
+      <AppContainer>
+        <NewApp />
+      </AppContainer>,
+      rootElement,
+    );
+  });
+} else {
+  app = <App />;
+}
+
+render(app, rootElement);

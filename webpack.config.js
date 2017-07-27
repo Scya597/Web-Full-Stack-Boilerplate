@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const hotMiddlewareScript = 'webpack-hot-middleware/client';
+const reactHotLoaderScript = 'react-hot-loader/patch';
 
 module.exports = (env) => {
   const { ifProd, ifNotProd } = getIfUtils(env);
@@ -11,6 +12,7 @@ module.exports = (env) => {
     entry: {
       bundle: [
         hotMiddlewareScript,
+        reactHotLoaderScript,
         './src/index.js',
       ],
     },
