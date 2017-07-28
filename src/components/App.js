@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import testData from '../testData';
 
 class App extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    console.log(testData);
   }
 
   renderNumbers() {
