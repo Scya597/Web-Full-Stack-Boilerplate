@@ -7,7 +7,7 @@ const rootElement = document.getElementById('root');
 
 let app;
 if (module.hot) {
-  const { AppContainer } = require('react-hot-loader'); // eslint-disable-line global-require
+  const { AppContainer } = require('react-hot-loader');
   app = (
     <AppContainer>
       <App />
@@ -15,7 +15,7 @@ if (module.hot) {
   );
 
   module.hot.accept('./components/App', () => {
-    const NewApp = require('./components/App').default; // eslint-disable-line global-require
+    const NewApp = require('./components/App').default;
     render(
       <AppContainer>
         <NewApp />

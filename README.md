@@ -1,5 +1,9 @@
-# MERN Boilerplate &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![logo](./assets/images/bar.png)
 
+# MERN Boilerplate &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+> 🎉 ✨ The Boilerplate I create to build app with ReactJS + NodeJS + Express + Mongodb + webpack 
+
+- [blog](https://scyablog.blogspot.tw/2017/07/mern.html)
 
 ## 0. Table of Contents  
 - [Setup Boilerplate](#1-setup)
