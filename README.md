@@ -4,8 +4,7 @@
 ## 0. Table of Contents  
 - [Setup Boilerplate](#1-setup)
 - [Setup Mongodb](#2-mongodb)
-- [Development](#3-development)
-- [Production](#4-production)
+- [Development & Production](#3-development&production)
 
 ## 1. Setup Boilerplate
 ```
@@ -54,26 +53,15 @@ If you don't want to run mongod everytime you need, the following command will a
 brew services start mongo
 ```
 
-## 3. Development
+## 3. Development & Production
 
-
-### 3.1 Setup script in index.html
-
-![screenshot](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/dev.png)
-
-### 3.2 To develop the project
+### 3.1 To develop the project
 
 ```
 npm run dev
 ```
 
-## 4. Production
-
-### 4.1 Setup script in index.html
-
-![screenshot](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/prod.png)
-
-### 4.2 Build production bundle and run the server
+### 3.2 Build production bundle and run the server
 
 ```
 npm run prod
