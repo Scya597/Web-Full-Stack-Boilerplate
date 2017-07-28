@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import testData from '../testData';
+import testData from '../testData.json';
+import '../scss/title.scss';
 
 class App extends Component {
   constructor() {
@@ -23,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="title">
         Boilerplate by YU-AN CHAN
         {this.renderNumbers()}
       </div>
