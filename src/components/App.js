@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import testData from '../testData.json';
+import testData from '../testData/testData.json';
 import '../scss/title.scss';
 
 class App extends Component {
