@@ -1,4 +1,4 @@
-![logo](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/boilerplate.png)
+![logo](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/boilerplate-image.png)
 
 # MERN Boilerplate &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 > 🎉 ✨ The Boilerplate I create to build app with ReactJS + NodeJS + Express + Mongodb + webpack 
