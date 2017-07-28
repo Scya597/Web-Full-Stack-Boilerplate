@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const hotMiddlewareScript = 'webpack-hot-middleware/client';
 const reactHotLoaderScript = 'react-hot-loader/patch';
@@ -43,5 +44,6 @@ module.exports = {
       template: './src/template.html',
       filename: 'index.html',
     }),
+    new DashboardPlugin(),
   ],
 };

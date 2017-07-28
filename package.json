@@ -7,7 +7,7 @@
     "start": "NODE_ENV=prod babel-node server/server.js --presets es2015,es2016,stage-2",
     "preprod": "rimraf public",
     "prod": "webpack --config webpack.prod.config.js -p",
-    "dev": "NODE_ENV=dev nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
+    "dev": "NODE_ENV=dev webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
   },
   "author": "Chan Yu An",
   "license": "ISC",
@@ -52,9 +52,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.20",
-    "webpack-config-utils": "2.0.0",
+    "webpack-dashboard": "^0.4.0",
     "webpack-dev-middleware": "^1.11.0",
-    "webpack-hot-middleware": "^2.13.2",
-    "webpack-validator": "2.2.7"
+    "webpack-hot-middleware": "^2.13.2"
   }
 }
