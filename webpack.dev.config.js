@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const hotMiddlewareScript = 'webpack-hot-middleware/client';
 const reactHotLoaderScript = 'react-hot-loader/patch';
@@ -14,8 +15,8 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.join(__dirname, 'public/bundle'),
-    publicPath: '/public/bundle/',
+    path: path.join(__dirname, 'public'),
+    publicPath: '/',
   },
   devtool: 'eval',
   module: {
@@ -38,5 +39,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/template.html',
+      filename: 'index.html',
+    }),
   ],
 };
