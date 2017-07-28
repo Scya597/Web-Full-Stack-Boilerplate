@@ -1,4 +1,4 @@
-![logo](./assets/images/bar.png)
+![logo](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/boilerplate.png)
 
 # MERN Boilerplate &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 > 🎉 ✨ The Boilerplate I create to build app with ReactJS + NodeJS + Express + Mongodb + webpack 
@@ -6,9 +6,9 @@
 - [blog](https://scyablog.blogspot.tw/2017/07/mern.html)
 
 ## 0. Table of Contents  
-- [Setup Boilerplate](#1-setup)
-- [Setup Mongodb](#2-mongodb)
-- [Development & Production](#3-development&production)
+- [Setup Boilerplate](#1-setup-boilerplate)
+- [Setup Mongodb](#2-setup-mongodb)
+- [Development and Production](#3-development-and-production)
 
 ## 1. Setup Boilerplate
 ```
@@ -57,7 +57,7 @@ If you don't want to run mongod everytime you need, the following command will a
 brew services start mongo
 ```
 
-## 3. Development & Production
+## 3. Development and Production
 
 ### 3.1 To develop the project
 
