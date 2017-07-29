@@ -1,7 +1,7 @@
 {
   "name": "mernboilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Boilerplate I create to build app with ReactJS+NodeJS+Express+Mongodb+webpack",
   "main": "index.js",
   "scripts": {
     "start": "node public/server.js",
@@ -12,7 +12,7 @@
     "dev": "NODE_ENV=dev webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
   },
   "author": "Chan Yu An",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.16.1",
     "body-parser": "^1.17.2",
