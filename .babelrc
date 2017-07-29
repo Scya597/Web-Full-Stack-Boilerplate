@@ -9,7 +9,14 @@
       }
     ],
     "react",
-    "stage-2"
+    "stage-2",
+    [
+      "babili",
+      {
+        "evaluate": false,
+        "mangle": false
+      }
+    ]
   ],
   "plugins": ["lodash"]
 }
