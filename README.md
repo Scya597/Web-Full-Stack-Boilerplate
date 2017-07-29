@@ -69,7 +69,7 @@ npm run dev
 ### 3.2 Build production bundle and run the server
 
 ```
-npm run prod
+npm run build
 npm start
 ```
 
@@ -84,4 +84,4 @@ npm start
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 - [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)
 - [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)
-- [babel-preset-latest](https://babeljs.io/docs/plugins/preset-latest/)
+- [babel-preset-env](https://github.com/babel/babel-preset-env)
