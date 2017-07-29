@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=prod babel-node server/server.js --presets es2015,es2016,stage-2",
+    "start": "NODE_ENV=prod babel-node server/server.js --presets latest,stage-2",
     "preprod": "rimraf public",
     "prod": "webpack --config webpack.prod.config.js -p",
     "dev": "NODE_ENV=dev webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
@@ -14,8 +14,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2016": "6.11.3",
+    "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.2",
@@ -36,6 +35,7 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-lodash": "^3.2.11",
+    "babel-preset-env": "^1.6.0",
     "css-loader": "^0.23.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
