@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=prod babel-node server/server.js --presets latest,stage-2",
+    "start": "NODE_ENV=prod babel-node server/server.js --presets env",
     "preprod": "rimraf public",
     "prod": "webpack --config webpack.prod.config.js -p",
+    "build": "webpack --config webpack.server.config.js -p",
     "dev": "NODE_ENV=dev webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore src/"
   },
   "author": "Chan Yu An",
@@ -14,7 +15,7 @@
   "dependencies": {
     "axios": "^0.16.1",
     "babel-cli": "^6.24.1",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.2",
@@ -31,7 +32,7 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
-    "babel-core": "6.13.2",
+    "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-lodash": "^3.2.11",
