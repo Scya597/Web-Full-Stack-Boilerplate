@@ -24,7 +24,7 @@ module.exports = {
     __dirname: false,
   },
   resolve: {
-    extensions: ['', '.js', '.json'],
+    extensions: ['.js', '.json'],
   },
   devtool: 'source-map',
   module: {
