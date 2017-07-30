@@ -84,4 +84,8 @@ npm start
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 - [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware)
 - [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware)
+- [webpack-bundle-analyzer](https://github.com/robertknight/webpack-bundle-size-analyzer)
+- [webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)
 - [babel-preset-env](https://github.com/babel/babel-preset-env)
+- [babel-plugin-lodash](https://github.com/lodash/babel-plugin-lodash)
+- [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
