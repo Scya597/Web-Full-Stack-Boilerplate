@@ -4,8 +4,8 @@
   "description": "The Boilerplate I create to build app with ReactJS+NodeJS+Express+Mongodb+webpack",
   "main": "index.js",
   "scripts": {
-    "start": "node public/server.js",
-    "prebuild": "rimraf public",
+    "start": "node private/server.js",
+    "prebuild": "rimraf public && rimraf private",
     "build:client": "webpack --config webpack.prod.config.js -p",
     "build:server": "webpack --config webpack.server.config.js -p",
     "build": "npm-run-all build:*",

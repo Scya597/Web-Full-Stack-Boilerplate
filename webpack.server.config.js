@@ -5,7 +5,7 @@ module.exports = {
   entry: './server/server.js',
   output: {
     filename: 'server.js',
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, 'private'),
   },
   target: 'node',
   externals: fs.readdirSync('node_modules').reduce((acc, mod) => {
