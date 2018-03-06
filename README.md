@@ -7,7 +7,7 @@
 </p>  
 
 
-> 🎉 ✨ The Boilerplate I created to build web app, with support to ReactJS, NodeJS, Express, Mongodb, mySQL, webpack, hot-reload, etc.
+> 🎉 ✨ The Boilerplate I created to build web app, with support to ReactJS, NodeJS, Express, Mongodb, mySQL, socket.io, webpack, hot-reload, etc.
 
 ## Table of Contents  
 1. [Setup Boilerplate](#1-setup-boilerplate)

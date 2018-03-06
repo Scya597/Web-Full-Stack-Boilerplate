@@ -1,7 +1,7 @@
 {
   "name": "web-full-stack-boilerplate",
   "version": "1.0.0",
-  "description": "The Boilerplate I created to build web app, with support to ReactJS, NodeJS, Express, Mongodb, mySQL, webpack, hot-reload, etc.",
+  "description": "The Boilerplate I created to build web app, with support to ReactJS, NodeJS, Express, Mongodb, mySQL, socket.io, webpack, hot-reload, etc.",
   "main": "index.js",
   "scripts": {
     "start": "node private/server.js",
