@@ -1,4 +1,4 @@
-![logo](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/boilerplate-logo.jpeg)
+![logo](https://github.com/Scya597/MERN-Boilerplate/blob/master/assets/images/boilerplate-logo.png)
 
 
 # Web Full Stack Boilerplate
