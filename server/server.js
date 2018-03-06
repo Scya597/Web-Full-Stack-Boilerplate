@@ -13,18 +13,18 @@ const app = express();
  *
  * To use Development mode, you'll have to run 'npm run dev' script in terminal. We use
  * webpackDevMiddleware and webpackHotMiddleware to run the project, and it only excute
- * 'App.js', which currently contains PageA, PageB, PageC, PageIO currently. If you are not
- * developing backend routing feature, it is prefered to develop in Development mode. If you
- * want to add more frontend pages to test in Development mode, you should modify 'App.js'
- * and add more pages inside it.
+ * 'App.js', which currently contains PageA, PageB, PageC, PageIO. If you are not developing
+ * backend routing feature, it is prefered to develop in Development mode. If you want
+ * to add more frontend pages to test in Development mode, you should modify 'App.js' and
+ * add more pages inside it.
  *
  * To use Production mode, you'll have to run 'npm run build' first, and then run 'npm start'
- * in terminal. It'll build all the frontend bundle file into a folder called 'public', and build
- * the server into a folder called 'private'. 'npm start' will execute the compiled server in
- * 'private' folder, which routes to all the frontend pages in 'public' folder.
- * If you've only modified a specific frontend pages after building, ex: 'PageA.js', you can run
- * 'npm run build:pageA' to rebuild it independently instead of rebuilding all pages.
- * Detailed scripts can be found at 'package.json'.
+ * in terminal. It'll build all the frontend bundle file into a folder called 'public',
+ * and build the server into a folder called 'private'. 'npm start' will execute the
+ * compiled server in 'private' folder, which routes to all the frontend pages in 'public'
+ * folder. If you've only modified a specific frontend pages after building, ex: 'PageA.js',
+ * you can run 'npm run build:pageA' to rebuild it independently instead of rebuilding all
+ * pages. Detailed scripts can be found at 'package.json'.
 */
 if (process.env.NODE_ENV === 'dev') {
   const webpackMiddleware = require('webpack-dev-middleware');
