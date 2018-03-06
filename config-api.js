@@ -14,7 +14,7 @@ const apiConfig = {
 const environment = {
   mysql: true,
   mongodb: true,
-  socketio: false,
+  socketio: true,
 };
 
 export {

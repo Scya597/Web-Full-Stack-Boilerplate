@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import { apiConfig } from '../../apiConfig';
+import { apiConfig } from '../../config-api';
 
 /** This Component shows PageB.
  * @extends Component */

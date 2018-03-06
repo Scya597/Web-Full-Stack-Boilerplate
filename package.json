@@ -10,11 +10,12 @@
     "build:pageA": "webpack --config webpackConfig/webpack.prod.pageA.config.js",
     "build:pageB": "webpack --config webpackConfig/webpack.prod.pageB.config.js",
     "build:pageC": "webpack --config webpackConfig/webpack.prod.pageC.config.js",
+    "build:pageIO": "webpack --config webpackConfig/webpack.prod.pageIO.config.js",
     "build": "npm-run-all build:*",
     "dev": "NODE_ENV=dev webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore client/",
     "win-dev": "set NODE_ENV=dev && webpack-dashboard -- nodemon --exec babel-node server/server.js --ignore public/ --ignore client/"
   },
-  "author": "Scya597 / Samuel Chan",
+  "author": "Scya597 a.k.a. Samuel Chan",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
@@ -24,7 +25,8 @@
     "mongoose": "^5.0.9",
     "mysql": "^2.15.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

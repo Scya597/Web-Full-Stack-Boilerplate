@@ -6,7 +6,7 @@ import {
 
 import UsersController from './controllers/controller-mongo';
 
-import { apiConfig } from '../../apiConfig';
+import { apiConfig } from '../../config-api';
 
 const routes = (app, environment) => {
   /* mysql's routes */

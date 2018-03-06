@@ -4,7 +4,8 @@ import path from 'path';
 
 import config from './config';
 import routes from './api/routes';
-import { environment } from '../apiConfig';
+import { environment } from '../config-api';
+import ioActivate from './io-setting';
 
 const app = express();
 /**
@@ -56,6 +57,9 @@ if (process.env.NODE_ENV === 'dev') {
   app.get('/PageC', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/pageC/index.html'));
   });
+  app.get('/PageIO', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/pageIO/index.html'));
+  });
 }
 
 if (environment.mongodb) {
@@ -80,8 +84,21 @@ app.use((err, req, res, next) => {
 */
 routes(app, environment);
 
-/* Run the app in config.port, which is 8080 currently */
-app.listen(config.port, config.host, () => {
-  console.info('Express listening on port', config.port);
-  console.log(process.env.NODE_ENV);
-});
+if (environment.socketio) {
+  const http = require('http');
+  const server = http.createServer(app);
+  const io = require('socket.io')(server);
+  ioActivate(io);
+  /* Run the app in config.port, which is 8080 currently */
+  server.listen(config.port, config.host, () => {
+    console.info('Express listening on port', config.port);
+    console.log(process.env.NODE_ENV);
+  });
+} else {
+  /* Run the app in config.port, which is 8080 currently */
+  app.listen(config.port, config.host, () => {
+    console.info('Express listening on port', config.port);
+    console.log(process.env.NODE_ENV);
+  });
+}
+

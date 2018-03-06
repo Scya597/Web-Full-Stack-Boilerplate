@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PageA from './PageA';
 import PageB from './PageB';
 import PageC from './PageC';
+import PageIO from './PageIO';
 
 import '../scss/style.scss';
 
@@ -26,6 +27,7 @@ class AppForDev extends Component {
    * this.state.mode === 0 -> PageA
    * this.state.mode === 1 -> PageB
    * this.state.mode === 2 -> PageC
+   * this.state.mode === 3 -> PageIO
    * @param {number} mode - the page's mode we want to switch into
    */
   changeMode(mode) {
@@ -42,8 +44,10 @@ class AppForDev extends Component {
       return <PageA />;
     } else if (this.state.mode === 1) {
       return <PageB />;
-    } else {
+    } else if (this.state.mode === 2) {
       return <PageC />;
+    } else {
+      return <PageIO />;
     }
   }
 
@@ -57,6 +61,7 @@ class AppForDev extends Component {
         <button onClick={() => { this.changeMode(0); }}>PageA</button>
         <button onClick={() => { this.changeMode(1); }}>PageB</button>
         <button onClick={() => { this.changeMode(2); }}>PageC</button>
+        <button onClick={() => { this.changeMode(3); }}>PageIO</button>
         {this.renderPages()}
       </div>
     );
