@@ -14,8 +14,8 @@ class PageA extends Component {
     this.state = {
       /**
        * Used to decide which subpage to show
-       * 0: check in page (initial status)
-       * 1: check in successful page
+       * 0: Registeration page (initial status)
+       * 1: Registeration succeed page
        */
       status: false,
     };

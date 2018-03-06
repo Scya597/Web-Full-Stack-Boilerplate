@@ -13,7 +13,7 @@ class PageIO extends Component {
     super(props);
     this.state = {
       /**
-       * If you deploy your app in platform such as Google Compute Engine, you can modify
+       * If you deploy your app in a platform such as Google Compute Engine, you can modify
        * the endpoint to the ip where you deploy the app, and use nginx to connect port 8080
        * to that ip.
        */

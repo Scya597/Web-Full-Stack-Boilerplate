@@ -14,25 +14,26 @@ class PageC extends Component {
     this.state = {
       /**
        * Used to decide which subpage to show
-       * 0: check in page (initial status)
-       * 1: check in successful page
+       * 0: Checking page (initial status)
+       * 1: Checking succeed page
        */
       status: false,
     };
-    this.checkIn = this.checkIn.bind(this);
+    this.checking = this.checking.bind(this);
     this.reset = this.reset.bind(this);
   }
 
   /**
-   * Post the current checkIn data into backend, and switch into
-   * success page if the post request succeed.
+   * Post the current checking data into backend, and switch into
+   * succeed page if the post request succeed.
    */
-  checkIn() {
+  checking() {
     axios.post(apiConfig.sqlCheck, {
       username: this.username.value,
     })
       .then((res) => {
         console.log(res.data);
+        this.setState({ status: true });
       })
       .catch((err) => {
         console.log(err);

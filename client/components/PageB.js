@@ -14,8 +14,8 @@ class PageB extends Component {
     this.state = {
       /**
        * Used to decide which subpage to show
-       * 0: check in page (initial status)
-       * 1: check in successful page
+       * 0: Authentication page (initial status)
+       * 1: Authentication succeed page
        */
       status: false,
     };
@@ -25,7 +25,7 @@ class PageB extends Component {
 
   /**
    * Post the current authenticate data into backend, and switch into
-   * success page if the post request succeed.
+   * succeed page if the post request succeed.
    */
   authenticate() {
     axios.post(apiConfig.sqlAuthenticate, {
@@ -34,6 +34,7 @@ class PageB extends Component {
     })
       .then((res) => {
         console.log(res.data);
+        this.setState({ status: true });
       })
       .catch((err) => {
         console.log(err);
