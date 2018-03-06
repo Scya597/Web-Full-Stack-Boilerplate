@@ -3,10 +3,20 @@ import socketIOClient from 'socket.io-client';
 import uuid from 'uuid/v1';
 import { socketTask as task } from '../../config-io';
 
-class App extends Component {
-  constructor() {
-    super();
+/** This Component shows PageIO. It demo some simple behavior of socket.io
+ * @extends Component */
+class PageIO extends Component {
+  /**
+   * @param {object} props - The props used to construct.
+   */
+  constructor(props) {
+    super(props);
     this.state = {
+      /**
+       * If you deploy your app in platform such as Google Compute Engine, you can modify
+       * the endpoint to the ip where you deploy the app, and use nginx to connect port 8080
+       * to that ip.
+       */
       endpoint: 'localhost:8080',
     };
     const { endpoint } = this.state;
@@ -16,6 +26,9 @@ class App extends Component {
     this.disconnect = this.disconnect.bind(this);
   }
 
+  /**
+   * It connect socket to backend and execute some common feature of socket.io
+   */
   connect() {
     this.socket.connect();
     this.socket.on(task.ACCEPT_DATA, (data) => {
@@ -31,10 +44,17 @@ class App extends Component {
     this.socket.emit(task.GET_DATA);
   }
 
+  /**
+   * It disconnect socket from backend.
+   */
   disconnect() {
     this.socket.disconnect();
   }
 
+  /**
+   * @return {JSX} - A syntax extension to JavaScript, which will be
+   * eventually compiled into html code.
+   */
   render() {
     return (
       <div>
@@ -46,4 +66,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default PageIO;
