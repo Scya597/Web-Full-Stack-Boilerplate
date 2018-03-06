@@ -18,7 +18,7 @@
 
 ## 1. Setup Boilerplate
 ```
-git clone https://github.com/Scya597/MERN-Boilerplate.git
+git clone https://github.com/Scya597/Web-Full-Stack-Boilerplate.git
 npm install
 ```
 
