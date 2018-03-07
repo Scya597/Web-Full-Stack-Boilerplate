@@ -7,12 +7,12 @@ import PageIO from './PageIO';
 
 import '../scss/style.scss';
 
-/** This Component is Only used in development stage. It switches between PageA and PageB.
+/**
+ * This Component is Only used in development stage. It switches between PageA and PageB.
  * @extends Component */
 class AppForDev extends Component {
   /**
-   * @param {object} props - The props used to construct.
-   */
+   * @param {object} props - The props used to construct. */
   constructor(props) {
     super(props);
     this.state = {
@@ -28,8 +28,7 @@ class AppForDev extends Component {
    * this.state.mode === 1 -> PageB
    * this.state.mode === 2 -> PageC
    * this.state.mode === 3 -> PageIO
-   * @param {number} mode - the page's mode we want to switch into
-   */
+   * @param {number} mode - the page's mode we want to switch into */
   changeMode(mode) {
     this.setState({ mode });
   }
@@ -37,8 +36,7 @@ class AppForDev extends Component {
   /**
    * render the current page of this.state.mode
    * @return {JSX} - A syntax extension to JavaScript, which will be eventually compiled
-   * into html code.
-   */
+   * into html code. */
   renderPages() {
     if (this.state.mode === 0) {
       return <PageA />;
@@ -53,8 +51,7 @@ class AppForDev extends Component {
 
   /**
    * @return {JSX} - A syntax extension to JavaScript, which will be eventually compiled
-   * into html code.
-   */
+   * into html code. */
   render() {
     return (
       <div>

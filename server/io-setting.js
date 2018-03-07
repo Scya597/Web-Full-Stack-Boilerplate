@@ -32,8 +32,7 @@ const ioActivate = (io) => {
   setInterval(() => {
     /**
      * You can put some logic here that is needed for looping
-     * ex. Game Development
-     */
+     * ex. Game Development */
   }, setting.dt);
 };
 

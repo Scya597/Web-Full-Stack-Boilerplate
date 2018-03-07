@@ -3,20 +3,19 @@ import axios from 'axios';
 
 import { apiConfig } from '../../config-api';
 
-/** This Component shows PageB.
+/**
+ * This Component shows PageB.
  * @extends Component */
 class PageB extends Component {
   /**
-   * @param {object} props - The props used to construct.
-   */
+   * @param {object} props - The props used to construct. */
   constructor(props) {
     super(props);
     this.state = {
       /**
        * Used to decide which subpage to show
        * 0: Authentication page (initial status)
-       * 1: Authentication succeed page
-       */
+       * 1: Authentication succeed page */
       status: false,
     };
     this.authenticate = this.authenticate.bind(this);
@@ -25,8 +24,7 @@ class PageB extends Component {
 
   /**
    * Post the current authenticate data into backend, and switch into
-   * succeed page if the post request succeed.
-   */
+   * succeed page if the post request succeed. */
   authenticate() {
     axios.post(apiConfig.sqlAuthenticate, {
       username: this.username.value,
@@ -42,16 +40,14 @@ class PageB extends Component {
   }
 
   /**
-   * switch subpage back to initial status
-   */
+   * switch subpage back to initial status */
   reset() {
     this.setState({ status: false });
   }
 
   /**
    * @return {JSX} - A syntax extension to JavaScript, which will be
-   * eventually compiled into html code.
-   */
+   * eventually compiled into html code. */
   render() {
     return (
       <div className="center">

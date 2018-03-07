@@ -8,6 +8,7 @@ const socketTask = {
 
 const setting = {
   dt: 1000 / 60,
+  endpoint: 'localhost:8080',
 };
 
 export { setting, socketTask };

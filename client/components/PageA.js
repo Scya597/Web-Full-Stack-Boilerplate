@@ -3,20 +3,19 @@ import axios from 'axios';
 
 import { apiConfig } from '../../config-api';
 
-/** This Component shows PageA.
+/**
+ * This Component shows PageA.
  * @extends Component */
 class PageA extends Component {
   /**
-   * @param {object} props - The props used to construct.
-   */
+   * @param {object} props - The props used to construct. */
   constructor(props) {
     super(props);
     this.state = {
       /**
        * Used to decide which subpage to show
        * 0: Registeration page (initial status)
-       * 1: Registeration succeed page
-       */
+       * 1: Registeration succeed page */
       status: false,
     };
     this.register = this.register.bind(this);
@@ -25,8 +24,7 @@ class PageA extends Component {
 
   /**
    * Post the current Registeration data into backend, and switch into
-   * success page if the post request succeed.
-   */
+   * success page if the post request succeed. */
   register() {
     axios.post(apiConfig.mongoPost, {
       username: this.username.value,
@@ -46,16 +44,14 @@ class PageA extends Component {
   }
 
   /**
-   * switch subpage back to initial status
-   */
+   * switch subpage back to initial status */
   reset() {
     this.setState({ status: false });
   }
 
   /**
    * @return {JSX} - A syntax extension to JavaScript, which will be
-   * eventually compiled into html code.
-   */
+   * eventually compiled into html code. */
   render() {
     return (
       <div className="center">

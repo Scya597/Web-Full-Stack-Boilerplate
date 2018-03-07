@@ -24,8 +24,7 @@ const app = express();
  * compiled server in 'private' folder, which routes to all the frontend pages in 'public'
  * folder. If you've only modified a specific frontend pages after building, ex: 'PageA.js',
  * you can run 'npm run build:pageA' to rebuild it independently instead of rebuilding all
- * pages. Detailed scripts can be found at 'package.json'.
-*/
+ * pages. Detailed scripts can be found at 'package.json'. */
 if (process.env.NODE_ENV === 'dev') {
   const webpackMiddleware = require('webpack-dev-middleware');
   const webpackHotMiddleware = require('webpack-hot-middleware');
@@ -80,13 +79,11 @@ app.use((err, req, res, next) => {
 });
 
 /**
- * Setting up API's function routing used by frontend.
-*/
+ * Setting up API's function routing used by frontend. */
 routes(app, environment);
 
 /**
- * Setting up Socket.io connection. Then run the app in config.port, which is 8080 currently
-*/
+ * Setting up Socket.io connection. Then run the app in config.port, which is 8080 currently */
 if (environment.socketio) {
   const http = require('http');
   const server = http.createServer(app);
