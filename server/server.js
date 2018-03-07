@@ -84,18 +84,19 @@ app.use((err, req, res, next) => {
 */
 routes(app, environment);
 
+/**
+ * Setting up Socket.io connection. Then run the app in config.port, which is 8080 currently
+*/
 if (environment.socketio) {
   const http = require('http');
   const server = http.createServer(app);
   const io = require('socket.io')(server);
   ioActivate(io);
-  /* Run the app in config.port, which is 8080 currently */
   server.listen(config.port, config.host, () => {
     console.info('Express listening on port', config.port);
     console.log(process.env.NODE_ENV);
   });
 } else {
-  /* Run the app in config.port, which is 8080 currently */
   app.listen(config.port, config.host, () => {
     console.info('Express listening on port', config.port);
     console.log(process.env.NODE_ENV);

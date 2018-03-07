@@ -18,7 +18,9 @@ const ioActivate = (io) => {
     });
 
     socket.on(task.GET_DATA, () => {
+      /* Emit task.ACCEPT_DATA to the client that emit task.GET_DATA */
       socket.emit(task.ACCEPT_DATA, data);
+      /* Emit task.ACCEPT_NEW_MESSAGE to all clients when one client emit task.GET_DATA */
       io.emit(task.ACCEPT_NEW_MESSAGE, 'ONE CLIENT HAS ACCEPTED DATA');
     });
 
@@ -28,7 +30,10 @@ const ioActivate = (io) => {
   });
 
   setInterval(() => {
-    // console.log('You Can Put Logic Here.');
+    /**
+     * You can put some logic here that is needed for looping
+     * ex. Game Development
+     */
   }, setting.dt);
 };
 
