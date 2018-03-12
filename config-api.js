@@ -4,11 +4,11 @@ const apiConfig = {
   sqlAuthenticate: '/api/sql/Authenticate',
   sqlCheck: '/api/sql/Check',
   /* mongodb's API */
-  mongoPost: '/api/mongo/posts',
-  mongoPut: '/api/mongo/posts/:id',
-  mongoDelete: '/api/mongo/posts/:id',
-  mongoGetAll: '/api/mongo/posts',
-  mongoGet: '/api/mongo/posts/:id',
+  mongoPost: '/api/mongo/users',
+  mongoPut: '/api/mongo/users/:id',
+  mongoDelete: '/api/mongo/users/:id',
+  mongoGetAll: '/api/mongo/users',
+  mongoGet: '/api/mongo/users/:id',
 };
 
 const environment = {
