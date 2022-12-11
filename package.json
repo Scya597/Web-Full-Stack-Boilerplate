@@ -19,7 +19,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "knex": "^0.14.2",
     "mongodb": "^3.0.4",
     "mongoose": "^5.0.9",
